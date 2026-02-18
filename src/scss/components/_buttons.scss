@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-50;
+
+  padding: rem(16) rem(40);
+  border-radius: rem(28);
+
+  font-size: rem(16);
+  font-weight: $font-weight-black;
+  line-height: rem(26);
+
+  transition: background-color 0.3s ease;
+
+  &--primary {
+    background-color: $color-primary;
+    color: $color-white;
+
+    span {
+      color: $color-primary-light;
+    }
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+
+    span {
+      color: $color-secondary-light;
+    }
+
+    &:hover {
+      background-color: $color-secondary-hover;
+    }
+  }
+}

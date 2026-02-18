@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  /*font-weight: 900;*/
+}
+
+h1 {
+  @include text-preset-1;
+  color: $color-text-dark;
+}
+
+h2 {
+  @include text-preset-2;
+  /*color: $color-text-dark;*/
+}
+
+h3 {
+  @include text-preset-3;
+  /*color: $color-primary;*/
+}
+
+p {
+  @include text-preset-4;
+  /*color: $color-text-medium;*/
+}

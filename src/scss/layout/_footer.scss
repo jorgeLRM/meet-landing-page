@@ -1,0 +1,88 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.cta {
+  background: url("../../img/mobile/image-footer.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $color-white;
+  position: relative;
+  padding: $spacing-800 $spacing-400;
+  margin-block-start: $spacing-1000;
+  z-index: -2;
+
+  display: grid;
+  place-items: center;
+
+  @include tablet {
+    background: url("../../img/tablet/image-footer.jpg") no-repeat;
+    //object-fit: contain;
+  }
+
+  @include desktop {
+    background: url("../../img/desktop/image-footer.jpg") no-repeat;
+    padding: $spacing-1000 $spacing-900;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &::before {
+    content: "";
+    background: $color-primary;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: -1;
+  }
+
+  &__divider {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $spacing-300;
+
+    @include tablet {
+      max-width: 504px;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 100%;
+      text-align: left;
+      gap: $spacing-400;
+      align-items: start;
+    }
+  }
+
+  &__title {
+    @include desktop {
+      max-width: 445px;
+    }
+  }
+
+  &__text {
+    @include desktop {
+      max-width: 355px;
+    }
+  }
+
+  &__container-button {
+    @include desktop {
+      width: 256px;
+      text-align: right;
+    }
+  }
+}

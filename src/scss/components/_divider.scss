@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: $spacing-900 0;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: $color-slate-300;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+  
+  &__number {
+    width: rem(56);
+    height: rem(56);
+    border: 1px solid $color-slate-300;
+    border-radius: 50%;
+    background-color: $color-bg;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: $font-size-button;
+    font-weight: $font-weight-black;
+    line-height: $line-height-normal;
+    color: $color-text-medium;
+    
+    position: relative;
+    z-index: 1;
+  }
+}

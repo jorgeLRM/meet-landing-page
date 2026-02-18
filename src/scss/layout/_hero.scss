@@ -1,0 +1,76 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+
+.hero {
+  padding-top: $spacing-800;
+  padding-bottom: $spacing-400;
+
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-600;
+
+  @include tablet {
+    padding-block: $spacing-800;
+  }
+
+  @include desktop {
+    background: url("../../img/desktop/image-hero-left.png") left -2vw top 65px
+        no-repeat,
+      url("../../img/desktop/image-hero-right.png") right -2vw bottom 65px
+        no-repeat;
+  }
+
+  &__figure {
+    // margin-block-start: $spacing-800;
+    // margin-block-end: $spacing-600;
+
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+
+    @include desktop {
+      visibility: hidden;
+      height: 0;
+      margin: 0;
+    }
+  }
+
+  &__image {
+    max-width: 116%;
+  }
+
+  &__content {
+    max-width: calc(100vw - $spacing-800);
+    margin: 0 auto;
+
+    display: flex;
+
+    // center
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    gap: $spacing-300;
+
+    @include tablet {
+      max-width: 448px;
+    }
+  }
+
+  &__text {
+    color: $color-text-medium;
+  }
+
+  &__buttons {
+    display: inline-flex;
+    flex-direction: column;
+    gap: $spacing-200;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
