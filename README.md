@@ -26,7 +26,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Meet Landing Page - GitHub Repository](https://github.com/jorgeLRM/meet-landing-page)
-- Live Site URL: [Meet Landing Page - Live](https://joramosmarti.github.io/meet-landing-page/)
+- Live Site URL: [Meet Landing Page - Live](https://jorgelrm.github.io/meet-landing-page/)
 
 ## My process
 
